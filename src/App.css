@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Roboto", "Kaushan Script", cursive;
+}
+body {
+  background: linear-gradient(
+      90deg,
+      rgba(48, 16, 255, 0.2) 0%,
+      rgba(100, 115, 255, 0.2) 100%
+    ),
+    url(/src/photo/bg.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.todo-app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30vw;
+  min-height: 80vh;
+  background: #fff;
+  text-align: center;
+  margin: 70px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #0c30ff;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: "Kaushan Script", cursive;
+  text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+  background: rgb(89, 238, 3) !important;
+}
+.todo-form {
+  margin-bottom: 32px;
+}
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #0c30ff;
+  outline: none;
+  width: 70%;
+  background: transparent;
+  color: white;
+}
+.todo-input::placeholder {
+  color: #0c30ff;
+  font-size: 1rem;
+}
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(16, 12, 255) 0%,
+    rgb(0, 153, 255) 100%
+  );
+  color: white;
+  text-transform: capitalize;
+}
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgb(43, 20, 255) 0%,
+    rgb(17, 247, 255) 100%
+  );
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.delete-icon {
+  margin-right: 5px;
+  color: rgb(248, 5, 5);
+}
+.edit-icon {
+  color: white;
+}
