@@ -1,35 +1,30 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
-function TodoList() {
-  const [todos, setTodos] = useState([]);
 
-  // add todo function
-  const addTodo = (todo) => {
+function TodoList() {
+// add todo function
+  const [todos, setTodos] = useState([]), addTodo = (todo) => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
     }
     const newTodos = [todo, ...todos];
     setTodos(newTodos);
-  };
-
-  // update todo function
-  const updateTodo = (todoId, newValue) => {
+    // update todo function
+  }, updateTodo = (todoId, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
     }
     setTodos((prev) =>
-      prev.map((item) => (item.id === todoId ? newValue : item))
+        prev.map((item) => (item.id === todoId ? newValue : item))
     );
-  };
+    // remove todo function
 
-  // remove todo function
-  const removeTodo = (id) => {
+  }, removeTodo = (id) => {
     const removeArr = [...todos].filter((todo) => todo.id !== id);
 
     setTodos(removeArr);
-  };
-  const completeTodo = (id) => {
+  }, completeTodo = (id) => {
     let updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isComplete = !todo.isComplete;

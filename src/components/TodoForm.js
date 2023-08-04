@@ -1,19 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 
 function TodoForm(props) {
-  const [input, setInput] = useState(props.edit ? props.edit.value : "");
+  let input, setInput;
+  [input, setInput] = useState(props.edit ? props.edit.value : "");
 
   const inputRef = useRef(null);
 
   useEffect(() => {
     inputRef.current.focus();
   });
-
   const handleChange = (e) => {
     setInput(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  }, handleSubmit = (e) => {
     e.preventDefault();
 
     props.onSubmit({

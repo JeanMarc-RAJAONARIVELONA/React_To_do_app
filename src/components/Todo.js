@@ -8,9 +8,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   const [edit, setEdit] = useState({
     id: null,
     value: "",
-  });
-
-  const submitUpdate = (value) => {
+  }), submitUpdate = (value) => {
     updateTodo(edit.id, value);
     setEdit({
       id: null,
